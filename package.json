@@ -1,0 +1,38 @@
+{
+  "name": "inf165-webdev-project",
+  "version": "1.0.0",
+  "description": "Template project for webdev assignment 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bzafiris/inf165-webdev-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bzafiris/inf165-webdev-project/issues"
+  },
+  "homepage": "https://github.com/bzafiris/inf165-webdev-project#readme",
+  "dependencies": {
+    "dom-parser": "^0.1.6",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "fast-xml-parser": "^3.19.0",
+    "for-each": "^0.3.3",
+    "foreach": "^2.0.5",
+    "html-dom-parser": "^1.0.0",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.7",
+    "stream": "0.0.2",
+    "timers": "^0.1.1",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "@types/xml2js": "^0.4.8",
+    "xml-fetch": "^1.1.91"
+  }
+}
