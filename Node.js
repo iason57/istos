@@ -61,7 +61,6 @@ function run(){
     */
 
     //const xml2js = require('xml2js');
-    
 
     var request_ = "firstName=john"
 
@@ -71,21 +70,17 @@ function run(){
         rs.text()    
         .then(data => {
             var parser = new DOMParser();
-            let xmlDoc = parser.parseFromString(data,'text/xml');
-            //console.log(xmlDoc)
-            var size = xmlDoc.rawHTML.authors.author.length;
-            console.log(size)
-            var buf1 = Buffer.from('authordisplay');
             
-            for(var j = 0; j < size; j++){
-                console.log("epanalipsi : "+j)
-                for( i in obj.authors.author[j]){
-                    var buf2 = Buffer.from(i);
-                    if(buf2.equals(buf1)){
-                        console.log(obj.authors.author[j][i])
-                    }
-                }
-            }
+            let xmlDoc = parser.parseFromString(data,'application/xml');
+            //console.log(xmlDoc.querySelectorAll('author'))
+
+            let authors = xmlDoc.querySelectorAll('author')
+
+            authors.forEach( auth_xml => {
+                let first_display_name = auth_xml.querySelector('authordisplay')
+                console.log(first_display_name)
+            });
+            
             /*
             xml2js.parseString(xmlDoc.rawHTML, (err, result) => {
             
