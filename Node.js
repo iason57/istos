@@ -76,9 +76,17 @@ function run(){
 
             let authors = xmlDoc.querySelectorAll('author')
 
+            //document.getElementById("results").innerHTML = "hello"
+
+            var container = document.getElementById("ans")
+
             authors.forEach( auth_xml => {
                 let first_display_name = auth_xml.querySelector('authordisplay')
                 console.log(first_display_name)
+                var display = document.createElement("p")
+                var text = document.createTextNode(first_display_name);
+                display.appendChild(text);
+                container.appendChild(display)
             });
             
             /*
